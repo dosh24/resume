@@ -1,0 +1,306 @@
+%-------------------------
+% Resume in Latex
+% Based off of: https://github.com/sb2nov/resume
+% and Jake Gutierrez's version of it
+% at https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs
+% inspired by https://practicaltypography.com/resumes.html
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin = 1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+%\usepackage[compact]{titlesec}  
+
+%--------------UNDERLINING---------------
+% taken from https://alexwlchan.net/2017/10/latex-underlines/
+
+\usepackage{contour}
+\usepackage{ulem}
+
+\renewcommand{\ULdepth}{3.8pt}
+\contourlength{0.8pt}
+
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+%----------------------------------------
+
+\graphicspath{ {./Images/} }
+
+%----------FONT OPTIONS----------
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+\usepackage{sectsty}
+\sectionfont{\fontsize{15}{0}\selectfont}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+
+% I could have just used the charter package here for the font I wanted...
+% but I'd still need to change compiler to XeLaTeX to include the title font
+% \usepackage{charter}
+
+\setmainfont{XCharter}
+
+%\newfontfamily{\basictitle}{basictitlefont}[
+%Path = Fonts/,
+%Extension = .ttf,
+%UprightFont = basictitlefont
+%]
+% to use:
+% {\basictitle This text uses the basictitle font}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\iffalse
+% \iftrue
+\addtolength{\oddsidemargin}{0.3in}
+\addtolength{\marginparsep}{0.3in}
+\addtolength{\evensidemargin}{0.3in}
+\addtolength{\textwidth}{-0.5in}
+\addtolength{\topmargin}{0.3in}
+\addtolength{\textheight}{0.3in}
+\fi
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    {\color{gray}\titlerule} \vspace{-5pt}
+    \vspace{-3pt}\scshape\raggedright\normalfont
+}{}{0pt}{}
+
+%----------SKILLS LIST SETTINGS----------
+\usepackage{multicol}
+%\item[\vspace{\fill}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+\item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-0.5pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-1pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-9pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% ----- TOGGLE PHOTO --------
+% comment out \iffalse and remove the % from \iftrue to toggle photo
+\iffalse
+% \iftrue
+\begin{wrapfigure}{R}{0.15\textwidth}
+\vspace{-35pt}
+\includegraphics[scale=0.20]{dp_cropped}
+\end{wrapfigure}
+\fi
+
+%----------HEADING----------
+
+{ \Huge Dominic Lawrence-O'Shea}
+\\
+
+% ----- TOGGLE FOR PHOTO ----
+% \vspace{10pt}
+
+\href{mailto:ssar0011@student.monash.edu}{
+    \faEnvelope
+    \thinspace \thinspace
+    \myuline{oshd24@gmail.com}} $|$
+\href{https://www.linkedin.com/in/dominic-lawrence-o-shea-93a28b181/}{
+    \faLinkedin
+    \thinspace \thinspace        
+    \myuline{dominiclawrenceoshea}} $|$
+\faPhone
+\thinspace \thinspace
+0466598273
+
+%-----------SUMMARY-----------
+\section*{Professional Summary}
+  Proactive Master of Data Science student currently attending Monash University, 
+  with Data Science industry experience. Frequently praised as hard-working by 
+  my peers and I can be relied upon to help the company achieve its goals. 
+      
+
+%-----------EDUCATION-----------
+\section*{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Monash University}{Clayton}
+      {BSc: Mathematical Statistics and Computational Science}{Jan 2018-Nov 2020} 
+      {MDS: Mathematical Statistics and Computational Science}{Jan 2021-Nov 2022 (Expected)} 
+      \resumeItemListStart
+      
+        \resumeItem{High Distinction Average}
+
+      \resumeItemListEnd
+     
+      \resumeSubheading
+       {John Monash Science School}{Clayton}
+       {Victorian Certificate of Education (VCE)}{Jan 2015 - Dec 2017}
+       
+       \resumeItemListStart
+       
+        \resumeItem{ATAR: 99+}
+        
+       \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section*{Experience}
+  \resumeSubHeadingListStart
+  
+    \resumeSubheading
+      {Data Science Intern}{Dec 2019 -- Feb 2020}
+      {PEXA}{Melbourne, VIC}
+      
+      
+    PEXA’s world-first digital settlements has revolutionised the way we exchange property in Australia. By providing quicker access to the proceeds of a sale and near real-time tracking on property settlements, our network of financial institutions and legal and conveyancing firms helps over 20,000 families a week safely settle their homes.      \resumeItemListStart
+        \resumeItem{Worked in parallel with an experienced data scientist.}
+        \resumeItem{Gained valueable experience in real world data applications including machine learning and performance analysis.}
+        \resumeItem{Was involved directly in the improvement of a revenue forecast model which included testing multiple models in the R package MLR as well as creating visualisations to monitor model performance over time.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst}{July 2020 -- Present}
+      {Cookaborough}{Cremorne, VIC}
+      
+      
+      Cookaborough is an easy to use platform designed to power ready-made meal businesses.
+      \resumeItemListStart
+        \resumeItem{Maintain several dashboards on Metabase which are created through MySql.}
+        \resumeItem{Worked directly with clients to help with their individual requirements.}
+        \resumeItem{Completed the Google Analytics for Beginners Course to improve my ability to gain useful insights in Google Analytics}		
+      \resumeItemListEnd
+      
+      \resumeSubheading
+      {Customer Service Team Member}{Dec 2015 -- Present}
+      {Woolworths}{Blackburn Sth, VIC}
+      
+      
+      Woolworths is Australia’s largest supermarket chain. Operating 995 stores across Australia, Woolworths relies on the 115,000 team members in stores, distribution centres and support offices to provide customers with superior service, range, value and convenience.
+      \resumeItemListStart
+        \resumeItem{Allowed me to improve my team work and customer service skills.}
+        \resumeItem{Trusted by my manager to start prior to the store opening as well as be the supervisor for the service department.}
+      \resumeItemListEnd
+      
+      
+      \iffalse
+      % \iftrue
+
+
+
+  
+      %-----------Awards-----------
+\section*{Awards}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading          
+          \resumeItemListStart
+            \resumeItem{Dux for year 7, 8 and 9 at Forest Hill College (2012-2014)}
+            \resumeItem{Principals Award, Year 9 at Forest Hill College (2014)}
+            \resumeItem{Junior School Captain for Forest Hill College (2014)}
+            \resumeItem{Australian Defence Force Long Tan Award (2015)}
+            \resumeItem{Excellence in Mathematics, Science, Humanities, Physical Education (2015)}
+            \resumeItem{Outstanding Leadership Award (2015)}
+            \resumeItem{John Monash Science School Council student representative (2017)}
+            \resumeItem{Subject excellence in Mathematical Methods and Chemistry (2017)}
+            \resumeItem{3rd place in Monash University #HackForHire (2021)}
+            \resumeItem{Offered CSP place for Masters of Data Science (2021)}
+          \resumeItemListEnd
+          
+
+    \resumeSubHeadingListEnd
+   
+
+
+
+
+   
+
+%-----------PROGRAMMING SKILLS-----------
+\section*{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL,  R} \\
+    }}
+ \end{itemize}
+\fi
+
+%-------------------------------------------
+
+\section*{Referees}
+James Tseng – Data Science mentor at PEXA
+	james.tseng00@gmail.com 
+	0488180884
+
+Lyndon Galvin – Co-founder at Cookaborough
+	lyndon@cookaborough.com
+	0401996691
+
+
+Wendy Webster – Manager at Woolworths
+	w.webster1961@gmail.com
+	0425765764
+
+
+%
+\iffalse
+% \iftrue
+\end{document}
